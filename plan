@@ -1,0 +1,17 @@
+# NLP Gastronomía Refactor Plan
+
+## 1. Contrato de datos reales y normalización
+- **schema-mapping**: Revisar `supabase/schema.sql` para mapear tablas clave (`reviews`, `external_places`, `business_competitors_fixed`). Documentar campos críticos (ej. `rating_value`, `sentiment`, `aspects`, `owner_answer`, `posted_at`, `competitor_rating_value`) y validar su disponibilidad en `loadCompleteBusinessData`.
+- **data-contracts-doc**: Crear/actualizar `docs/data-contracts.md` con ejemplos reales de `businessData.reviews`, `businessData.analysis` y competidores. Describir shape esperado, campos opcionales y brechas actuales.
+- **normalizer-layer**: Añadir en `src/lib/dataLayer.ts` (o módulo dedicado) funciones que normalicen los payloads de Supabase hacia interfaces coherentes (`ReviewInsight`, `AnalysisAggregate`, `CompetitorSnapshot`). Manejar valores nulos y defaults sin recurrir a mocks.
+- **types-alignment**: Definir interfaces tipadas en `src/types` basadas en la estructura real. Señalar con comentarios qué columnas del schema son fuente primaria y qué campos se calculan en frontend.
+
+## 2. Refactor UI con insights reales
+- **dashboard-insights**: Ajustar `src/components/Dashboard.tsx` para consumir el nuevo nivel de normalización: mostrar fortalezas, barreras para 5★ y alertas derivadas de `reviews.aspects`, `sentiment` y faltas de respuesta reales. Registrar supuestos/fallbacks en comentarios.
+- **trendline-source**: Extender `src/components/TrendChart.tsx` para admitir series históricas reales agrupadas por semana/mes. Si no existe endpoint dedicado, generar la serie desde `reviews` en el data layer y dejar contrato documentado.
+- **reviews-manager-flags**: Reaprovechar `ReviewsManager.tsx` incorporando indicadores derivados (higiene, gap 5★, SLA) usando los datos normalizados. Mantener UI preparada para habilitar IA cuando el backend provea respuestas automáticas.
+- **competitor-snapshot**: Conectar `CompetitorBenchmark` y vistas de competencia al dataset de `business_competitors_fixed`; asegurar que métricas del dashboard reflejen el mismo contrato y definir fallback sin competidores.
+
+## 3. QA y handoff
+- **ui-tests**: Crear pruebas básicas (React Testing Library) para verificar que el Dashboard renderiza fortaleza/gap/alerta con mocks.
+- **handoff-notes**: Documentar en README del proyecto cómo activar modo mock frente a real.

@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* A11y: foco visible global coherente */
+:root {
+  --focus-ring: 2px solid #3b82f6; /* blue-500 */
+}
+
+:focus-visible {
+  outline: var(--focus-ring);
+  outline-offset: 2px;
+}
