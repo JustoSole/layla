@@ -11,6 +11,11 @@ export const loadRealBusinesses = async (limit = 10): Promise<BusinessData[]> =>
   try {
     console.log('🔍 Cargando negocios reales según schema centralizado...');
     
+    if (!dbClient) {
+      console.warn('⚠️ Database client not available, returning empty data');
+      return [];
+    }
+    
     // Query con campos exactos según schema
     const { data, error } = await dbClient
       .from('external_places')

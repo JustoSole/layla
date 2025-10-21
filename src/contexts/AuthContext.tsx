@@ -68,6 +68,11 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     const getInitialSession = async () => {
       try {
         if (import.meta.env.DEV) console.log('🔐 Getting initial session...');
+        if (!supabase) {
+          console.log('⚠️ Supabase not configured, skipping auth');
+          setLoading(false);
+          return;
+        }
         const { data: { session }, error } = await supabase.auth.getSession();
         
         if (error) {
@@ -97,6 +102,9 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     };
 
     // Escuchar cambios de autenticación
+    if (!supabase) {
+      return () => {};
+    }
     const { data: { subscription } } = supabase.auth.onAuthStateChange(
       async (event, session) => {
         if (import.meta.env.DEV) console.log('🔐 Auth state changed:', event, !!session?.user);
@@ -133,6 +141,12 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     try {
       setLoading(true);
       if (import.meta.env.DEV) console.log('🔐 Starting Google sign-in...');
+      
+      if (!supabase) {
+        console.warn('⚠️ Supabase not configured, login disabled');
+        return { error: new Error('Authentication not available') };
+      }
+      
       const result = await supabase.auth.signInWithOAuth({
         provider: 'google',
         options: {
@@ -160,6 +174,12 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     try {
       setLoading(true);
       if (import.meta.env.DEV) console.log('🔐 Signing out...');
+      
+      if (!supabase) {
+        console.warn('⚠️ Supabase not configured, logout disabled');
+        return { error: null };
+      }
+      
       const result = await supabase.auth.signOut();
       
       // Limpiar datos del business también (evitamos dependencia circular)

@@ -36,7 +36,7 @@ const LandingPage: React.FC = () => {
     await signInWithGoogle();
   };
   const primaryCtaClasses =
-    'inline-flex items-center justify-center gap-2 rounded-lg bg-orange-600 px-6 py-3 text-base font-semibold text-white shadow-lg transition-all duration-150 hover:-translate-y-0.5 hover:bg-orange-700 hover:shadow-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-500';
+    'inline-flex items-center justify-center gap-2 rounded-lg bg-blue-600 px-6 py-3 text-base font-semibold text-white shadow-lg transition-all duration-150 hover:-translate-y-0.5 hover:bg-blue-700 hover:shadow-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500';
   const secondaryCtaClasses =
     'inline-flex items-center justify-center gap-2 rounded-lg border border-gray-300 px-6 py-3 text-base font-semibold text-gray-700 transition-all duration-150 hover:-translate-y-0.5 hover:border-gray-400 hover:text-gray-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500';
 
@@ -70,31 +70,31 @@ const LandingPage: React.FC = () => {
       benefit: 'Respondé 10x más rápido con calidad profesional'
     },
     {
-      icon: <BarChart3 className="h-6 w-6 text-green-600" />,
+      icon: <BarChart3 className="h-6 w-6 text-blue-600" />,
       title: 'Visión Holística 360°',
       description: 'Dashboard completo: rating, tendencias, competencia, staff y alertas críticas en una sola vista',
       benefit: 'Tomá decisiones informadas, no por intuición'
     },
     {
-      icon: <Shield className="h-6 w-6 text-purple-600" />,
+      icon: <Shield className="h-6 w-6 text-blue-600" />,
       title: 'Encuestas Internas QR',
       description: 'Capturá feedback negativo ANTES de que llegue a Google con encuestas en mesa',
       benefit: 'Prevení reviews negativas, recuperá clientes insatisfechos'
     },
     {
-      icon: <TrendingUp className="h-6 w-6 text-orange-600" />,
+      icon: <TrendingUp className="h-6 w-6 text-blue-600" />,
       title: 'Análisis de Tendencias + Competencia',
       description: 'Seguí tu evolución mensual y comparate con 4 competidores directos en tiempo real',
       benefit: 'Sabé dónde estás parado y hacia dónde ir'
     },
     {
-      icon: <Award className="h-6 w-6 text-red-600" />,
+      icon: <Award className="h-6 w-6 text-blue-600" />,
       title: 'Detección Automática de Staff',
       description: 'Identificá qué empleados mencionan los clientes y su desempeño individual',
       benefit: 'Gestión de equipo basada en voz del cliente'
     },
     {
-      icon: <CheckCircle className="h-6 w-6 text-indigo-600" />,
+      icon: <CheckCircle className="h-6 w-6 text-blue-600" />,
       title: 'Insights Accionables Específicos',
       description: 'No te dice "mejorá el servicio", te dice "problema concentrado viernes-sábado 20:00-22:00"',
       benefit: 'Patrones específicos, no consejos genéricos'
@@ -169,14 +169,13 @@ const LandingPage: React.FC = () => {
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-8">
               <a href="#features" className="text-gray-600 hover:text-gray-900 transition-colors">Características</a>
-              <a href="#caso-exito" className="text-gray-600 hover:text-gray-900 transition-colors">Caso de Éxito</a>
               <a href="#pricing" className="text-gray-600 hover:text-gray-900 transition-colors">Lista de Espera</a>
               <button 
                 onClick={() => {
                   const formSection = document.getElementById('waitlist-form');
                   formSection?.scrollIntoView({ behavior: 'smooth' });
                 }}
-                className="bg-orange-600 text-white px-4 py-2 text-sm rounded-lg shadow-sm transition-all duration-150 hover:-translate-y-0.5 hover:bg-orange-700 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-500"
+                className="bg-blue-600 text-white px-4 py-2 text-sm rounded-lg shadow-sm transition-all duration-150 hover:-translate-y-0.5 hover:bg-blue-700 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500"
               >
                 {primaryCtaLabel}
               </button>
@@ -210,13 +209,6 @@ const LandingPage: React.FC = () => {
                   Características
                 </a>
                 <a 
-                  href="#caso-exito" 
-                  className="block text-gray-600 hover:text-gray-900 transition-colors"
-                  onClick={() => setShowMobileMenu(false)}
-                >
-                  Caso de Éxito
-                </a>
-                <a 
                   href="#pricing" 
                   className="block text-gray-600 hover:text-gray-900 transition-colors"
                   onClick={() => setShowMobileMenu(false)}
@@ -230,7 +222,7 @@ const LandingPage: React.FC = () => {
                       const formSection = document.getElementById('waitlist-form');
                       formSection?.scrollIntoView({ behavior: 'smooth' });
                     }}
-                    className="w-full bg-orange-600 text-white py-2 px-4 text-sm rounded-lg shadow-sm transition-all duration-150 hover:-translate-y-0.5 hover:bg-orange-700 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-500"
+                    className="w-full bg-blue-600 text-white py-2 px-4 text-sm rounded-lg shadow-sm transition-all duration-150 hover:-translate-y-0.5 hover:bg-blue-700 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500"
                   >
                     {primaryCtaLabel}
                   </button>
@@ -246,7 +238,7 @@ const LandingPage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-center">
             <div>
-              <div className="inline-flex items-center rounded-full bg-orange-100 px-3 py-1 text-sm font-medium text-orange-800">
+              <div className="inline-flex items-center rounded-full bg-blue-100 px-3 py-1 text-sm font-medium text-blue-800">
                 <Zap className="mr-1 h-4 w-4" />
                 IA Especializada en Restaurantes
               </div>
@@ -302,7 +294,7 @@ const LandingPage: React.FC = () => {
                   <h3 className="text-lg font-semibold text-gray-900">Ejemplo: Pizzería Centro</h3>
                   <p className="text-sm text-gray-500">Esto es lo que descubriríamos sobre tu restaurante</p>
                 </div>
-                <span className="inline-flex items-center rounded-full bg-orange-50 px-3 py-1 text-xs font-semibold text-orange-700">
+                <span className="inline-flex items-center rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold text-blue-700">
                   IA en acción
                 </span>
               </div>
@@ -344,35 +336,75 @@ const LandingPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-16 bg-white border-b border-gray-100">
+      {/* Stats Section - Main Focus */}
+      <section className="py-20 bg-gradient-to-br from-blue-50 to-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center rounded-full bg-blue-100 px-4 py-2 text-sm font-medium text-blue-800 mb-6">
+              <TrendingUp className="mr-2 h-4 w-4" />
+              Datos de la industria
+            </div>
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
               Por qué importa tu reputación online
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Los números que todo dueño de restaurante debería conocer
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+              Los números que todo dueño de restaurante debería conocer para entender el impacto real de las reviews en su negocio
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-orange-600 mb-2">87%</div>
-              <div className="text-lg font-semibold text-gray-900 mb-1">lee reviews antes de ir</div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+            <div className="bg-white rounded-2xl p-6 shadow-lg text-center">
+              <div className="text-4xl font-bold text-blue-600 mb-3">87%</div>
+              <div className="text-lg font-semibold text-gray-900 mb-2">lee reviews antes de ir</div>
               <div className="text-sm text-gray-600">de los clientes consulta Google Maps antes de elegir restaurante</div>
             </div>
             
-            <div className="text-center">
-              <div className="text-4xl font-bold text-orange-600 mb-2">+0.5★</div>
-              <div className="text-lg font-semibold text-gray-900 mb-1">= 50% más visitas</div>
+            <div className="bg-white rounded-2xl p-6 shadow-lg text-center">
+              <div className="text-4xl font-bold text-blue-600 mb-3">+0.5★</div>
+              <div className="text-lg font-semibold text-gray-900 mb-2">= 50% más visitas</div>
               <div className="text-sm text-gray-600">mejorar rating de 4.0 a 4.5 estrellas aumenta tráfico significativamente</div>
             </div>
             
-            <div className="text-center">
-              <div className="text-4xl font-bold text-orange-600 mb-2">73%</div>
-              <div className="text-lg font-semibold text-gray-900 mb-1">nunca vuelve</div>
+            <div className="bg-white rounded-2xl p-6 shadow-lg text-center">
+              <div className="text-4xl font-bold text-blue-600 mb-3">73%</div>
+              <div className="text-lg font-semibold text-gray-900 mb-2">nunca vuelve</div>
               <div className="text-sm text-gray-600">de clientes insatisfechos no regresa si no se resuelve su problema</div>
+            </div>
+
+            <div className="bg-white rounded-2xl p-6 shadow-lg text-center">
+              <div className="text-4xl font-bold text-blue-600 mb-3">4.0★</div>
+              <div className="text-lg font-semibold text-gray-900 mb-2">rating mínimo</div>
+              <div className="text-sm text-gray-600">debajo de 4.0 estrellas la mayoría de clientes ni considera el restaurante</div>
+            </div>
+          </div>
+
+          <div className="bg-white rounded-2xl p-8 shadow-lg">
+            <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">El problema: No sabés qué mejorar específicamente</h3>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <MessageSquare className="h-8 w-8 text-red-600" />
+                </div>
+                <h4 className="font-bold text-gray-900 mb-2">Reviews genéricas</h4>
+                <p className="text-gray-600 text-sm">"El servicio fue lento" - ¿Pero cuándo? ¿Por qué? ¿Qué días específicamente?</p>
+              </div>
+              
+              <div className="text-center">
+                <div className="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Clock className="h-8 w-8 text-yellow-600" />
+                </div>
+                <h4 className="font-bold text-gray-900 mb-2">Tiempo perdido</h4>
+                <p className="text-gray-600 text-sm">Horas leyendo reviews manualmente sin poder identificar patrones claros</p>
+              </div>
+              
+              <div className="text-center">
+                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <BarChart3 className="h-8 w-8 text-blue-600" />
+                </div>
+                <h4 className="font-bold text-gray-900 mb-2">Decisiones por intuición</h4>
+                <p className="text-gray-600 text-sm">Sin datos específicos, las mejoras son adivinanzas costosas</p>
+              </div>
             </div>
           </div>
         </div>
@@ -411,108 +443,6 @@ const LandingPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Success Case Section */}
-      <section id="caso-exito" className="py-20 bg-gradient-to-br from-green-50 to-emerald-50">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center rounded-full bg-green-100 px-4 py-2 text-sm font-medium text-green-800 mb-4">
-              <CheckCircle className="mr-2 h-4 w-4" />
-              Caso de Éxito Real
-            </div>
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              Trattoria Luna Verde: De 4.1★ a 4.7★ en 4 meses
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Restaurante italiano de 45 mesas en Villa Crespo. Cómo ReputacionLocal los ayudó a identificar y solucionar problemas específicos.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="bg-white rounded-2xl p-8 shadow-lg">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">El Desafío</h3>
-              
-              <div className="space-y-4 mb-8">
-                <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-red-600 font-bold text-sm">1</span>
-                  </div>
-                  <div>
-                    <p className="font-semibold text-gray-900">Rating estancado en 4.1★</p>
-                    <p className="text-gray-600 text-sm">185 reviews, no sabían por qué no mejoraba</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-red-600 font-bold text-sm">2</span>
-                  </div>
-                  <div>
-                    <p className="font-semibold text-gray-900">Reviews negativas recurrentes</p>
-                    <p className="text-gray-600 text-sm">"Tardaron mucho", "se olvidaron el pedido"</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-red-600 font-bold text-sm">3</span>
-                  </div>
-                  <div>
-                    <p className="font-semibold text-gray-900">No sabían cómo priorizar</p>
-                    <p className="text-gray-600 text-sm">¿Mejorar la carta? ¿Contratar personal? ¿Cambiar decoración?</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            <div className="bg-white rounded-2xl p-8 shadow-lg">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Lo que Descubrimos</h3>
-              
-              <div className="space-y-6">
-                <div className="border-l-4 border-orange-400 pl-4">
-                  <h4 className="font-bold text-gray-900 mb-2">🕐 Problema #1: Tiempo de espera</h4>
-                  <p className="text-gray-600 mb-2">47 menciones de "tardaron", "lento", "espera" concentradas viernes-sábado 20:00-22:00</p>
-                  <p className="text-green-700 font-semibold">💡 Insight: Problema operativo específico en horario pico, no generalizado</p>
-                </div>
-                
-                <div className="border-l-4 border-blue-400 pl-4">
-                  <h4 className="font-bold text-gray-900 mb-2">👥 Problema #2: Inconsistencia de servicio</h4>
-                  <p className="text-gray-600 mb-2">23 menciones de "se olvidaron", "no trajeron". Ana (mesera): 92% menciones positivas vs otros 67%</p>
-                  <p className="text-green-700 font-semibold">💡 Insight: Gran diferencia en desempeño individual del equipo</p>
-                </div>
-                
-                <div className="border-l-4 border-green-400 pl-4">
-                  <h4 className="font-bold text-gray-900 mb-2">🎯 Gap Analysis: Oportunidad identificada</h4>
-                  <p className="text-gray-600 mb-2">31 clientes satisfechos mencionaron "faltan postres tradicionales italianos"</p>
-                  <p className="text-green-700 font-semibold">💡 Insight: Menú de postres es debilidad vs expectativas del target</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div className="mt-12 bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-8 text-white text-center">
-            <h3 className="text-2xl font-bold mb-4">Resultados en 4 Meses</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div>
-                <div className="text-3xl font-bold mb-2">4.1★ → 4.7★</div>
-                <div className="text-green-100">Rating mejorado +0.6 puntos</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold mb-2">+35%</div>
-                <div className="text-green-100">Más reservas por Google</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold mb-2">-60%</div>
-                <div className="text-green-100">Menos quejas por tiempo</div>
-              </div>
-            </div>
-            
-            <blockquote className="mt-8 text-lg italic border-l-4 border-green-200 pl-6">
-              "Por primera vez entendimos exactamente dónde estaban nuestros problemas reales. Ya no adivinamos, tenemos datos específicos."
-              <footer className="text-green-200 mt-2">— Marco Rossi, Dueño de Trattoria Luna Verde</footer>
-            </blockquote>
-          </div>
-        </div>
-      </section>
 
       {/* Social Proof Section - Honest approach */}
       <section className="py-20 bg-gray-50">
@@ -568,7 +498,7 @@ const LandingPage: React.FC = () => {
           <div className="flex justify-center">
             <div className="relative w-full max-w-md rounded-2xl border border-gray-200 bg-white p-8 shadow-lg">
               <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                <span className="rounded-full bg-orange-500 px-4 py-1 text-sm font-medium text-white shadow">
+                <span className="rounded-full bg-blue-500 px-4 py-1 text-sm font-medium text-white shadow">
                   Reporte en menos de 24hs
                 </span>
               </div>
@@ -577,7 +507,7 @@ const LandingPage: React.FC = () => {
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">ReputacionLocal</h3>
                 <p className="text-gray-600 mb-4">La primera IA especializada en restaurantes</p>
                 <div className="flex items-center justify-center mb-2">
-                  <span className="text-3xl font-bold text-orange-600">GRATIS</span>
+                  <span className="text-3xl font-bold text-blue-600">GRATIS</span>
                 </div>
                 <p className="text-sm text-gray-500">Reporte completo sin costo • Sin compromiso</p>
               </div>
@@ -585,7 +515,7 @@ const LandingPage: React.FC = () => {
               <ul className="space-y-4 mb-8">
                 {waitlistFeatures.map((feature, featureIndex) => (
                   <li key={featureIndex} className="flex items-center space-x-3">
-                    <CheckCircle className="h-5 w-5 text-orange-500 flex-shrink-0" />
+                    <CheckCircle className="h-5 w-5 text-blue-500 flex-shrink-0" />
                     <span className="text-gray-700">{feature}</span>
                   </li>
                 ))}
@@ -597,7 +527,7 @@ const LandingPage: React.FC = () => {
                   const formSection = document.getElementById('waitlist-form');
                   formSection?.scrollIntoView({ behavior: 'smooth' });
                 }}
-                className="w-full rounded-lg bg-orange-600 py-4 text-lg font-semibold text-white shadow-lg transition-all duration-150 hover:-translate-y-0.5 hover:bg-orange-700 hover:shadow-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-500"
+                className="w-full rounded-lg bg-blue-600 py-4 text-lg font-semibold text-white shadow-lg transition-all duration-150 hover:-translate-y-0.5 hover:bg-blue-700 hover:shadow-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500"
               >
                 Solicitar mi reporte gratuito
               </button>
@@ -610,7 +540,7 @@ const LandingPage: React.FC = () => {
             </p>
             <a 
               href="mailto:sales@reputacionlocal.com?subject=Consulta%20para%20múltiples%20restaurantes"
-              className="text-orange-600 font-semibold hover:text-orange-700 transition-colors"
+              className="text-blue-600 font-semibold hover:text-blue-700 transition-colors"
             >
               Contactar para volumen →
             </a>
@@ -619,7 +549,7 @@ const LandingPage: React.FC = () => {
       </section>
 
       {/* Waitlist Form Section */}
-      <section id="waitlist-form" className="py-20 bg-orange-50">
+      <section id="waitlist-form" className="py-20 bg-blue-50">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
@@ -648,7 +578,7 @@ const LandingPage: React.FC = () => {
                   id="owner-name"
                   name="owner-name"
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 outline-none transition-colors"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-colors"
                   placeholder="Ej: Juan Perez"
                 />
               </div>
@@ -662,7 +592,7 @@ const LandingPage: React.FC = () => {
                   id="restaurant-name"
                   name="restaurant-name"
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 outline-none transition-colors"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-colors"
                   placeholder="Ej: La Pizzería del Centro"
                 />
               </div>
@@ -677,7 +607,7 @@ const LandingPage: React.FC = () => {
                 id="google-maps-url"
                 name="google-maps-url"
                 required
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 outline-none transition-colors"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-colors"
                 placeholder="https://maps.google.com/..."
               />
               <p className="text-sm text-gray-500 mt-1">
@@ -695,7 +625,7 @@ const LandingPage: React.FC = () => {
                   id="email"
                   name="email"
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 outline-none transition-colors"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-colors"
                   placeholder="tu@email.com"
                 />
               </div>
@@ -708,7 +638,7 @@ const LandingPage: React.FC = () => {
                   type="tel"
                   id="phone"
                   name="phone"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 outline-none transition-colors"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-colors"
                   placeholder="+54 11 1234-5678"
                 />
               </div>
@@ -722,14 +652,14 @@ const LandingPage: React.FC = () => {
                 id="current-challenges"
                 name="current-challenges"
                 rows={3}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 outline-none transition-colors resize-none"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-colors resize-none"
                 placeholder="Ej: Tenemos muchas reviews negativas sobre tiempo de espera, no sabemos cómo mejorar..."
               />
             </div>
             
             <button
               type="submit"
-              className="w-full bg-orange-600 text-white py-4 px-6 rounded-lg text-lg font-semibold shadow-lg transition-all duration-150 hover:-translate-y-0.5 hover:bg-orange-700 hover:shadow-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-500"
+              className="w-full bg-blue-600 text-white py-4 px-6 rounded-lg text-lg font-semibold shadow-lg transition-all duration-150 hover:-translate-y-0.5 hover:bg-blue-700 hover:shadow-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500"
             >
               📧 Enviar solicitud (te responderemos en menos de 24hs)
             </button>
@@ -783,11 +713,11 @@ const LandingPage: React.FC = () => {
       </section>
 
       {/* Final CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-orange-600 to-red-600">
+      <section className="py-20 bg-gradient-to-br from-blue-600 to-blue-700">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="bg-white rounded-2xl shadow-xl p-8">
-            <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-6">
-              <MessageSquare className="h-8 w-8 text-orange-600" />
+            <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+              <MessageSquare className="h-8 w-8 text-blue-600" />
             </div>
             
             <h2 className="text-2xl font-bold text-gray-900 mb-4">
@@ -802,7 +732,7 @@ const LandingPage: React.FC = () => {
                 const formSection = document.getElementById('waitlist-form');
                 formSection?.scrollIntoView({ behavior: 'smooth' });
               }}
-              className="bg-orange-600 text-white px-8 py-4 rounded-lg text-lg font-semibold shadow-lg transition-all duration-150 hover:-translate-y-0.5 hover:bg-orange-700 hover:shadow-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-500"
+              className="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold shadow-lg transition-all duration-150 hover:-translate-y-0.5 hover:bg-blue-700 hover:shadow-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500"
             >
               📧 Solicitar mi reporte gratuito ahora
             </button>
@@ -930,7 +860,7 @@ const LandingPage: React.FC = () => {
                 const formSection = document.getElementById('waitlist-form');
                 formSection?.scrollIntoView({ behavior: 'smooth' });
               }}
-              className="w-full bg-orange-600 py-3 text-base font-semibold text-white transition-all duration-150 hover:bg-orange-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-500"
+              className="w-full bg-blue-600 py-3 text-base font-semibold text-white transition-all duration-150 hover:bg-blue-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500"
               aria-label="Solicitar reporte gratuito"
             >
               📧 Solicitar reporte gratuito
